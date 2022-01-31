@@ -7,7 +7,7 @@ gulp.task('compile:sass', function () {
     return gulp.src('assets/layout/layout.scss')
             .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
             .pipe(rename({ suffix: '.' + require('./package.json').version}))
-            .pipe(gulp.dest('./styles'))
+            .pipe(gulp.dest('./css'))
             .pipe(cleanCSS())
             .pipe(rename({ suffix: '.min'}))
             .pipe(gulp.dest('./css'));
