@@ -1,8 +1,5 @@
+@charset "UTF-8";
 /* General - variáveis de SASS */
-$fontSize:14px;
-$borderRadius:12px;
-$transitionDuration:.2s;
-
 /** Colors - variáveis de CSS */
 :root {
   --surface-0: #20262e;
@@ -16,4 +13,23 @@ $transitionDuration:.2s;
   --surface-700: #d2d4d5;
   --surface-800: #e9e9ea;
   --surface-900: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  font-size: 14px;
+  background: var(--surface-0);
+}
+
+.main-navbar .navbar > * {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.space-between {
+  justify-content: space-between;
 }
