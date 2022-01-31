@@ -1,0 +1,33 @@
+{
+  "name": "wallet-man-template",
+  "version": "1.0.0",
+  "description": "Template for Hagatus Wallet Manager",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^5.1.3",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.49.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "gulp",
+    "gulp": "./node_modules/.bin/gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hagatus/wallet-man-template.git"
+  },
+  "keywords": [
+    "template"
+  ],
+  "author": "anderson.contreira@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hagatus/wallet-man-template/issues"
+  },
+  "homepage": "https://github.com/hagatus/wallet-man-template#readme"
+}

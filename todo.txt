@@ -1,0 +1,3 @@
+https://designrevision.com/demo/shards-dashboard-lite/add-new-post.html
+https://github.com/DesignRevision/shards-dashboard
+https://gist.github.com/MattCheely/3220568
