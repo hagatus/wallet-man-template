@@ -5,9 +5,6 @@ const browserSync = require('browser-sync').create();
 const cleanCSS = require('gulp-clean-css');
 const mustache = require("gulp-mustache");
 /**
- * TODO fazer todos os comandos enviarem os arquivos para a pasta build
- */
-/**
  * Mustache
  */
 gulp.task('mustache', function () {
@@ -19,17 +16,11 @@ gulp.task('mustache', function () {
 /**
  * Build
  */
-gulp.task('build:css', function () {
-    return gulp.src("css/**").pipe(gulp.dest("./build/css"));
-});
-gulp.task('build:js', function () {
-    return gulp.src("js/**").pipe(gulp.dest("./build/js"));
-});
 gulp.task('build:images', function () {
-    return gulp.src("images/**").pipe(gulp.dest("./build/images"));
+    return gulp.src("assets/images/**").pipe(gulp.dest("./build/images"));
 });
 
-gulp.task('build', gulp.series('build:css', 'build:js', 'build:images', 'mustache'));
+gulp.task('build', gulp.series('build:images', 'mustache'));
 /**
  * Sass
  */
@@ -37,10 +28,10 @@ gulp.task('compile:sass', function () {
     return gulp.src('assets/layout/layout.scss')
             .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
             .pipe(rename({suffix: '.' + require('./package.json').version}))
-            .pipe(gulp.dest('./css'))
+            .pipe(gulp.dest('./build/css'))
             .pipe(cleanCSS())
             .pipe(rename({suffix: '.min'}))
-            .pipe(gulp.dest('./css'));
+            .pipe(gulp.dest('./build/css'));
 });
 
 
@@ -49,10 +40,10 @@ gulp.task('compile', gulp.series('compile:sass'));
  * Bootstrap
  */
 gulp.task('bootstrap:css', function () {
-    return gulp.src('node_modules/bootstrap/dist/css/**').pipe(gulp.dest('css/bootstrap'));
+    return gulp.src('node_modules/bootstrap/dist/css/**').pipe(gulp.dest('build/css/bootstrap'));
 })
 gulp.task('bootstrap:js', function () {
-    return gulp.src('node_modules/bootstrap/dist/js/**').pipe(gulp.dest('js/bootstrap'));
+    return gulp.src('node_modules/bootstrap/dist/js/**').pipe(gulp.dest('build/js/bootstrap'));
 })
 
 gulp.task('bootstrap', gulp.series('bootstrap:css', 'bootstrap:js'))
@@ -61,10 +52,10 @@ gulp.task('bootstrap', gulp.series('bootstrap:css', 'bootstrap:js'))
  * Fontawesome
  */
 gulp.task('fontawesome:css', function () {
-    return gulp.src('node_modules/@fortawesome/fontawesome-free/css/**').pipe(gulp.dest('css/fontawesome'));
+    return gulp.src('node_modules/@fortawesome/fontawesome-free/css/**').pipe(gulp.dest('build/css/fontawesome'));
 })
 gulp.task('fontawesome:js', function () {
-    return gulp.src('node_modules/@fortawesome/fontawesome-free/js/**').pipe(gulp.dest('js/fontawesome'));
+    return gulp.src('node_modules/@fortawesome/fontawesome-free/js/**').pipe(gulp.dest('build/js/fontawesome'));
 })
 
 gulp.task('fontawesome', gulp.series('fontawesome:css', 'fontawesome:js'))
@@ -86,12 +77,29 @@ gulp.task('server', gulp.series('watch'), function () {
 
 /**
  * Dist
+ * TODO incluir minificação
  */
+gulp.task('dist:css', function () {
+    return gulp.src("build/css/**").pipe(gulp.dest("./dist/css"));
+});
+gulp.task('dist:js', function () {
+    return gulp.src("build/js/**").pipe(gulp.dest("./dist/js"));
+});
+gulp.task('dist:html', function () {
+    return gulp.src("build/**.html").pipe(gulp.dest("./dist"));
+});
+gulp.task('dist:images', function () {
+    return gulp.src("build/images/**").pipe(gulp.dest("./dist/images"));
+});
+gulp.task('dist', gulp.series('dist:css', 'dist:js', 'dist:html', 'dist:images'));
 
 /**
  * Initialize Project
  */
 gulp.task('init', gulp.series('bootstrap', 'fontawesome', 'compile', 'mustache', 'build'))
 
+/**
+ * Default
+ */
 gulp.task('default', gulp.series('server'));
 

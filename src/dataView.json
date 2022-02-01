@@ -17,5 +17,8 @@
   },
   "register": {
     "title": "Cadastro"
+  },
+  "forgot": {
+    "title": "Esqueci minha senha"
   }
 }
