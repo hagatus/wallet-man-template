@@ -1,0 +1,63 @@
+<!-- Meus FIIs begin -->
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header border-bottom">
+                <h6 class="m-0">Melhores Opções</h6>
+            </div>
+            <div class="card-body">
+                <div class="row border-bottom">
+<!--                    <div class="col-12 col-sm-6 d-flex mb-2">-->
+<!--                        <a class="btn btn-primary" href="fiis-new.html" role="button">Adicionar Novo</a>-->
+<!--                    </div>-->
+
+                </div>
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th scope="col">Ticket</th>
+                        <th scope="col">Público Alvo</th>
+                        <th scope="col">Tipo</th>
+                        <th scope="col">Administrador</th>
+                        <th scope="col">Patrimônio/Cota</th>
+                        <th scope="col">Ultimo rendimento (R$)</th>
+                        <th scope="col">Ultimo rendimento (%)</th>
+                        <th scope="col">Data Pagamento (%)</th>
+                        <th scope="col">Rendimento médio 12m (R$)</th>
+                        <th scope="col">Rendimento médio 12m (%)</th>
+                        <th scope="col" style="width: 20%">Ações</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {{#fiis.bestOptions}}
+                        <tr class="">
+                            <td>{{symbol}}</td>
+                            <td>{{public}}</td>
+                            <td>{{type}}</td>
+                            <td>{{admin}}</td>
+                            <td>R$ {{price}}</td>
+                            <td>R$ {{last_yield_value}}</td>
+                            <td>{{last_yield_percentage}} %</td>
+                            <td>{{payment_date}}</td>
+                            <td>R$ {{period_yield_value}}</td>
+                            <td>{{period_yield_percentage}} %</td>
+
+                            <td >
+                                <a class="btn btn-warning btn-sm" href="#" role="button"><i class="fas fa-star"></i>&nbsp;Favoritos</a>
+                                <a class="btn btn-success btn-sm" href="#" role="button"><i class="fas fa-plus"></i>&nbsp;Adicionar</a>
+                                <a class="btn btn-primary btn-sm" href="https://fiis.com.br/{{symbol}}/" target="_blank" role="button"><i class="fas fa-info"></i>&nbsp;Detalhes</a>
+                            </td>
+                        </tr>
+                    {{/fiis.bestOptions}}
+                    {{^fiis.bestOptions}}
+                        <tr class="">
+                            <td colspan="5">No data</td>
+                        </tr>
+                    {{/fiis.bestOptions}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Meus FIIs end -->

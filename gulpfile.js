@@ -8,7 +8,7 @@ const mustache = require("gulp-mustache");
  * Mustache
  */
 gulp.task('compile:mustache', function () {
-    return gulp.src("src/*.mustache")
+    return gulp.src(["src/**/*.mustache", '!src/partials/*.mustache'])
             .pipe(mustache('src/dataView.json', {}, {}))
             .pipe(rename({extname: '.html'}))
             .pipe(gulp.dest("./build"));
@@ -34,9 +34,9 @@ gulp.task('compile:js', function () {
     return gulp.src('assets/js/*.js')
             .pipe(rename({suffix: '.' + require('./package.json').version}))
             .pipe(gulp.dest('./build/js'));
-            // .pipe(cleanJS())
-            // .pipe(rename({suffix: '.min'}))
-            // .pipe(gulp.dest('./build/css'));
+    // .pipe(cleanJS())
+    // .pipe(rename({suffix: '.min'}))
+    // .pipe(gulp.dest('./build/css'));
 });
 
 

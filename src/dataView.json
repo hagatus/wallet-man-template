@@ -12,11 +12,61 @@
   },
   "fiis": {
     "title": "FIIs",
-    "list": [
-      {"symbol": "BARI11", "value": 104.34, "qty": 10, "price": 110.07, "val":  -1},
-      {"symbol": "BBPO11", "value": 107.07, "qty": 10, "price": 115.40, "val":  -1},
-      {"symbol": "DEVA11", "value": 101.45, "qty": 2, "price": 101.45, "val":  0},
-      {"symbol": "HABT11", "value": 125.45, "qty": 2, "price": 110.40, "val":  1}
+    "bestOptions": [
+      {
+        "symbol": "BARI11",
+        "public": "Geral",
+        "type": "Papel: CRIs",
+        "admin": "BTG Pactual",
+        "last_yield_value": 1.06,
+        "last_yield_percentage": 1.04,
+        "payment_date": "2022-01-21",
+        "period_yield_value": 1.00,
+        "period_yield_percentage": 1.24,
+        "price": 95.60
+      },
+      {
+        "symbol": "BIME11",
+        "public": "Geral",
+        "type": "Papel: CRIs",
+        "admin": "Oliveira Trust",
+        "last_yield_value": 1.06,
+        "last_yield_percentage": 1.04,
+        "payment_date": "2022-01-21",
+        "period_yield_value": 1.00,
+        "period_yield_percentage": 1.24,
+        "price": 95.60
+      }
+    ],
+    "userEquities": [
+      {
+        "symbol": "BARI11",
+        "value": 104.34,
+        "qty": 10,
+        "price": 110.07,
+        "val": -1
+      },
+      {
+        "symbol": "BBPO11",
+        "value": 107.07,
+        "qty": 10,
+        "price": 115.40,
+        "val": -1
+      },
+      {
+        "symbol": "DEVA11",
+        "value": 101.45,
+        "qty": 2,
+        "price": 101.45,
+        "val": 0
+      },
+      {
+        "symbol": "HABT11",
+        "value": 125.45,
+        "qty": 2,
+        "price": 110.40,
+        "val": 1
+      }
     ]
   },
   "wallet": {

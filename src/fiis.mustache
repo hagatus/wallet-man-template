@@ -64,70 +64,10 @@
                             </div>
                         </div>
 
+                        {{>partials/fiis/userEquities}}
+                        {{>partials/fiis/userFavourites}}
+                        {{>partials/fiis/bestOptions}}
 
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="card">
-                                    <div class="card-header border-bottom">
-                                        <h6 class="m-0">Meus FIIs</h6>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="row border-bottom">
-                                            <div class="col-12 col-sm-6 d-flex mb-2">
-                                                <a class="btn btn-primary" href="fiis-new.html" role="button">Adicionar Novo</a>
-                                            </div>
-
-                                        </div>
-                                        <table class="table table-striped">
-                                            <thead>
-                                            <tr>
-                                                <th scope="col">FII</th>
-                                                <th scope="col">Quant.</th>
-                                                <th scope="col">Valor</th>
-                                                <th scope="col">Total</th>
-                                                <th scope="col">Preço</th>
-                                                <th scope="col">Preço Total</th>
-                                                <th scope="col">Val</th>
-                                                <th scope="col">Rendimentos</th>
-                                                <th scope="col">Rendimentos total Mês</th>
-                                                <th scope="col" colspan="6">Rendimentos 6 meses</th>
-                                                <th scope="col">Ações</th>
-                                            </tr>
-                                            </thead>
-                                            <tbody>
-                                                {{#fiis.list}}
-                                                <tr class="{{#val}}table-danger{{/val}}">
-                                                    <td>{{symbol}}</td>
-                                                    <td>{{qty}}</td>
-                                                    <td>R$ {{value}}</td>
-                                                    <td>R$ {{total}}</td>
-                                                    <td>R$ {{price}}</td>
-                                                    <td>R$ {{price_total}}</td>
-                                                    <td>{{val}}%</td>
-                                                    <td>R$ 0.9</td>
-                                                    <td>R$ 9.00</td>
-                                                    <td>R$ 0.9</td>
-                                                    <td>R$ 0.9</td>
-                                                    <td>R$ 0.9</td>
-                                                    <td>R$ 0.9</td>
-                                                    <td>R$ 0.9</td>
-                                                    <td>R$ 0.9</td>
-                                                    <td>
-                                                        <a class="btn btn-primary" href="fiis-details.html" role="button">Mais detalhes</a>
-                                                    </td>
-                                                </tr>
-                                                {{/fiis.list}}
-                                                {{^fiis.list}}
-                                                    <tr class="">
-                                                        <td colspan="5">No data</td>
-                                                    </tr>
-                                                {{/fiis.list}}
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
 
 

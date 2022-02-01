@@ -38,6 +38,13 @@ html {
   justify-content: space-between;
 }
 
+.sticky-top {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+}
+
 .login {
   height: 100%;
 }
