@@ -74,7 +74,7 @@ gulp.task('fontawesome', gulp.series('fontawesome:css', 'fontawesome:js'))
  */
 gulp.task('watch', function () {
     gulp.watch('assets/layout/**/*.scss', gulp.series('compile:sass', 'mustache'));
-    gulp.watch('src/**/*.mustache', gulp.series('build'));
+    gulp.watch('src/**/*.mustache', gulp.series('mustache'));
 });
 
 /**
