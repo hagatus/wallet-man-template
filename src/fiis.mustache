@@ -22,41 +22,43 @@
                         <div class="page-header row">
                             <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
                                 <span class="text-uppercase page-subtitle">{{default.dashboard}}</span>
-                                <h3 class="page-title">FIIs Overview</h3>
+                                <h3 class="page-title">FIIs - Visão Geral</h3>
                             </div>
                         </div>
                         <!-- page header end -->
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <!-- FIIs composição gráficos begin -->
+                                <div class="card" id="fii-composition">
+                                    <div class="card-header border-bottom">
+                                        <h6 class="m-0">FIIs - Composição</h6>
+                                    </div>
+                                    <div class="card-body d-flex">
+                                        <canvas height="220" style="max-width: 100% !important;" class="fii-composition-graph m-auto"></canvas>
+                                    </div>
+                                    <div class="card-footer">
 
-                        <div class="col-lg-4">
-                            <!-- FIIs composição gráficos begin -->
-                            <div class="card" id="fii-composition">
-                                <div class="card-header border-bottom">
-                                    <h6 class="m-0">FIIs - Composição</h6>
+                                    </div>
                                 </div>
-                                <div class="card-body d-flex">
-
-                                </div>
-                                <div class="card-footer">
-
-                                </div>
+                                <!-- FIIs composição gráficos end -->
                             </div>
-                            <!-- FIIs composição gráficos end -->
-                        </div>
-                        <div class="col-lg-4">
-                            <!-- FIIs evolução gráficos begin -->
-                            <div class="card" id="fii-evolution">
-                                <div class="card-header border-bottom">
-                                    <h6 class="m-0">FIIs - Evolução</h6>
-                                </div>
-                                <div class="card-body d-flex">
+                            <div class="col-lg-6">
+                                <!-- FIIs evolução gráficos begin -->
+                                <div class="card" id="fii-evolution">
+                                    <div class="card-header border-bottom">
+                                        <h6 class="m-0">FIIs - Evolução</h6>
+                                    </div>
+                                    <div class="card-body d-flex">
+                                        <canvas height="220" style="max-width: 100% !important;" class="fii-evolution-graph"></canvas>
+                                    </div>
+                                    <div class="card-footer">
 
+                                    </div>
                                 </div>
-                                <div class="card-footer">
-
-                                </div>
+                                <!-- FIIs evolução gráficos end -->
                             </div>
-                            <!-- FIIs evolução gráficos end -->
                         </div>
+
                     </div>
 
 
