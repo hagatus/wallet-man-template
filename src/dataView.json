@@ -8,5 +8,11 @@
   },
   "login": {
     "title": "Login"
+  },
+  "fiis": {
+    "title": "FIIs"
+  },
+  "wallet": {
+    "title": "Carteira"
   }
 }
