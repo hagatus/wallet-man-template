@@ -7,20 +7,13 @@ const mustache = require("gulp-mustache");
 /**
  * Mustache
  */
-gulp.task('mustache', function () {
+gulp.task('compile:mustache', function () {
     return gulp.src("src/*.mustache")
             .pipe(mustache('src/dataView.json', {}, {}))
             .pipe(rename({extname: '.html'}))
             .pipe(gulp.dest("./build"));
 });
-/**
- * Build
- */
-gulp.task('build:images', function () {
-    return gulp.src("assets/images/**").pipe(gulp.dest("./build/images"));
-});
 
-gulp.task('build', gulp.series('build:images', 'mustache'));
 /**
  * Sass
  */
@@ -34,8 +27,20 @@ gulp.task('compile:sass', function () {
             .pipe(gulp.dest('./build/css'));
 });
 
+/**
+ * JS
+ */
+gulp.task('compile:js', function () {
+    return gulp.src('assets/js/*.js')
+            .pipe(rename({suffix: '.' + require('./package.json').version}))
+            .pipe(gulp.dest('./build/js'));
+            // .pipe(cleanJS())
+            // .pipe(rename({suffix: '.min'}))
+            // .pipe(gulp.dest('./build/css'));
+});
 
-gulp.task('compile', gulp.series('compile:sass'));
+
+gulp.task('compile', gulp.series('compile:sass', 'compile:js','compile:mustache'));
 /**
  * Bootstrap
  */
@@ -46,26 +51,37 @@ gulp.task('bootstrap:js', function () {
     return gulp.src('node_modules/bootstrap/dist/js/**').pipe(gulp.dest('build/js/bootstrap'));
 })
 
-gulp.task('bootstrap', gulp.series('bootstrap:css', 'bootstrap:js'))
+gulp.task('bootstrap', gulp.series('bootstrap:css', 'bootstrap:js'));
 
 /**
  * Fontawesome
  */
 gulp.task('fontawesome:css', function () {
     return gulp.src('node_modules/@fortawesome/fontawesome-free/css/**').pipe(gulp.dest('build/css/fontawesome'));
-})
+});
 gulp.task('fontawesome:js', function () {
     return gulp.src('node_modules/@fortawesome/fontawesome-free/js/**').pipe(gulp.dest('build/js/fontawesome'));
-})
+});
+gulp.task('fontawesome:webfonts', function () {
+    return gulp.src('node_modules/@fortawesome/fontawesome-free/webfonts/**').pipe(gulp.dest('build/css/webfonts'));
+});
 
-gulp.task('fontawesome', gulp.series('fontawesome:css', 'fontawesome:js'))
+gulp.task('fontawesome', gulp.series('fontawesome:css', 'fontawesome:js', 'fontawesome:webfonts'))
+
+/**
+ * Chart.js
+ */
+gulp.task('chart.js', function () {
+    return gulp.src('node_modules/chart.js/dist/**').pipe(gulp.dest('build/js/chart.js'));
+})
 
 /**
  * Watch
  */
 gulp.task('watch', function () {
-    gulp.watch('assets/layout/**/*.scss', gulp.series('compile:sass', 'mustache'));
-    gulp.watch('src/**/*.mustache', gulp.series('mustache'));
+    gulp.watch('assets/js/**/*.js', gulp.series('compile:js'));
+    gulp.watch('assets/layout/**/*.scss', gulp.series('compile:sass'));
+    gulp.watch('src/**/*.mustache', gulp.series('compile:mustache'));
 });
 
 /**
@@ -94,9 +110,18 @@ gulp.task('dist:images', function () {
 gulp.task('dist', gulp.series('dist:css', 'dist:js', 'dist:html', 'dist:images'));
 
 /**
+ * Build
+ */
+gulp.task('build:images', function () {
+    return gulp.src("assets/images/**").pipe(gulp.dest("./build/images"));
+});
+
+gulp.task('build', gulp.series('bootstrap', 'fontawesome', 'chart.js', 'build:images'));
+
+/**
  * Initialize Project
  */
-gulp.task('init', gulp.series('bootstrap', 'fontawesome', 'compile', 'mustache', 'build'))
+gulp.task('init', gulp.series('compile', 'build'))
 
 /**
  * Default
