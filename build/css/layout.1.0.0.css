@@ -25,6 +25,10 @@ html {
   background: var(--surface-0);
 }
 
+.main-content .card {
+  margin-top: 5%;
+}
+
 .main-navbar .navbar > * {
   display: -ms-flexbox;
   display: flex;
@@ -39,6 +43,23 @@ html {
 }
 
 .login .card {
+  max-width: 300px;
+  margin: 10% auto;
+}
+
+.social-buttons {
+  margin-top: 10px;
+}
+
+.social-buttons button {
+  margin-top: 5px;
+}
+
+.register {
+  height: 100%;
+}
+
+.register .card {
   max-width: 300px;
   margin: 10% auto;
 }

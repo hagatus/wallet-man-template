@@ -1,7 +1,8 @@
 {
   "default": {
     "projectName": "Hagatus Wallet Manager",
-    "title": "Home"
+    "title": "Home",
+    "dashboard": "Dashboard"
   },
   "index": {
     "title": "Home"

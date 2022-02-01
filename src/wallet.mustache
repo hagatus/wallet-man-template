@@ -9,13 +9,30 @@
         {{>partials/headAssets}}
     </head>
     <body class="layout-fixed">
-        <div class="container-fluid">
-            <div class="row">
-                {{>partials/sidebar}}
+    <div class="container-fluid">
+        <div class="row">
+            {{>partials/sidebar}}
+            <main class="main-content">
+
                 {{>partials/mainNavbar}}
-                {{>partials/header}}
-                {{>partials/footer}}
-            </div>
+
+                <div class="main-content-container">
+                    <!-- page header begin -->
+                    <div class="page-header row">
+                        <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
+                            <span class="text-uppercase page-subtitle">{{default.dashboard}}</span>
+                            <h3 class="page-title">FIIs Overview</h3>
+                        </div>
+                    </div>
+                    <!-- page header end -->
+
+                </div>
+
+
+            </main>
+            {{>partials/footer}}
+
         </div>
+    </div>
     </body>
 </html>
