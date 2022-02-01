@@ -11,7 +11,13 @@
     "title": "Login"
   },
   "fiis": {
-    "title": "FIIs"
+    "title": "FIIs",
+    "list": [
+      {"symbol": "BARI11", "value": 104.34, "qty": 10, "price": 110.07, "val":  -1},
+      {"symbol": "BBPO11", "value": 107.07, "qty": 10, "price": 115.40, "val":  -1},
+      {"symbol": "DEVA11", "value": 101.45, "qty": 2, "price": 101.45, "val":  0},
+      {"symbol": "HABT11", "value": 125.45, "qty": 2, "price": 110.40, "val":  1}
+    ]
   },
   "wallet": {
     "title": "Carteira"
