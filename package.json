@@ -13,7 +13,9 @@
     "sass": "^1.49.0"
   },
   "devDependencies": {
-    "browser-sync": "^2.27.7"
+    "browser-sync": "^2.27.7",
+    "gulp-mustache": "^5.0.0",
+    "mustache": "^4.2.0"
   },
   "scripts": {
     "start": "gulp",

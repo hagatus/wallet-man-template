@@ -1,0 +1,12 @@
+{
+  "default": {
+    "projectName": "Hagatus Wallet Manager",
+    "title": "Home"
+  },
+  "index": {
+    "title": "Home"
+  },
+  "login": {
+    "title": "Login"
+  }
+}
