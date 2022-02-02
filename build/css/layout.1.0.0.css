@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /* General - variáveis de SASS */
 /** Colors - variáveis de CSS */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
 :root {
   --surface-0: #20262e;
   --surface-50: #363c43;
@@ -77,4 +78,8 @@ html {
 
 .social-buttons button {
   margin-top: 5px;
+}
+
+.opensans {
+  font-family: "Open Sans", sans-serif;
 }

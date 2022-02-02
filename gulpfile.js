@@ -113,7 +113,8 @@ gulp.task('dist', gulp.series('dist:css', 'dist:js', 'dist:html', 'dist:images')
  * Build
  */
 gulp.task('build:images', function () {
-    return gulp.src("assets/images/**").pipe(gulp.dest("./build/images"));
+    return gulp.src("assets/images/**").pipe(gulp.dest("./build/images")) &&
+    gulp.src("assets/*.ico").pipe(gulp.dest("./build"));
 });
 
 gulp.task('build', gulp.series('bootstrap', 'fontawesome', 'chart.js', 'build:images'));
