@@ -21,28 +21,55 @@
         <div class="container-fluid">
             <div class="row">
                 <!-- Main sidebar Begin -->
-                <aside class="main-sidebar">
-                
-                
-                </aside>
-                <!-- Main sidebar End -->
-
-                <main class="main-content">
-
-                    <!-- Navbar Begin -->
-                    <div class="main-navbar sticky-top">
-                        <nav class="navbar navbar-expand-lg navbar-light bg-light space-between">
+                <aside class="main-sidebar col-12 col-md-3 col-lg-2 px-0" style="display: none">
+                    <div class="main-navbar">
+                        <nav class="navbar">
                             <!-- logo begin-->
                             <a class="navbar-brand" href="index.html">
                                 <div class="d-table m-auto opensans">
                                     <img id="main-logo" class="d-inline-block align-top mr-1" style="max-width: 25px;" src="images/logo.png" alt="Hagatus logo">
                                     <span class="d-none d-md-inline ml-1">
-                                        <b>Hagatus</b>&nbsp;Wallet&nbsp;<span>Manager</span>
-                                    </span>
+                                    <b>Hagatus</b>&nbsp;Wallet&nbsp;<span>Manager</span>
+                                </span>
                                 </div>
                             </a>
                             <!-- logo end-->
-                            <!-- Left navbar links -->
+                            <a class="toggle-sidebar d-sm-inline d-md-none d-lg-none">
+                                <i class="fas fa-chevron-left">&nbsp;</i>
+                            </a>
+                        </nav>
+                    </div>
+                    <form class="main-sidebar"></form>
+                    <div class="nav-wrapper">
+                        <ul class="nav">
+                            <li class="nav-item">
+                                <a href="index.html" class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="wallet.html" class="nav-link">Carteira</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="fiis.html" class="nav-link">FIIs</a>
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
+                <!-- Main sidebar End -->
+                <!-- Navbar Begin -->
+                <header class="main-navbar sticky-top bg-dark">
+                    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                        <!-- logo begin-->
+                        <a class="navbar-brand" href="index.html">
+                            <div class="d-table m-auto opensans">
+                                <img id="main-logo" class="d-inline-block align-top mr-1" style="max-width: 25px;" src="images/logo.png" alt="Hagatus logo">
+                                <span class="d-none d-md-inline ml-1">
+                                    <b>Hagatus</b>&nbsp;Wallet&nbsp;<span>Manager</span>
+                                </span>
+                            </div>
+                        </a>
+                        <!-- logo end-->
+                        <!-- Left navbar links -->
+                        <div class="navbar-collapse">
                             <ul class="navbar-nav">
                                 <li class="nav-item">
                                     <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
@@ -56,79 +83,87 @@
                                 <li class="nav-item d-none d-sm-inline-block">
                                     <a href="fiis.html" class="nav-link">FIIs</a>
                                 </li>
-                            </ul>
-                            <!-- Form Search Begin -->
-                            <form class="d-flex">
-                                            <span class="input-group-text" id="addon-wrapping">
-                                                <i class="fas fa-search"></i>
-                                            </span>
-                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                                <!--                        <button class="btn btn-outline-success" type="submit">Search</button>-->
-                            </form>
-                            <!-- Form Search End -->
-                            <!-- Right menu -->
-                            <ul class="navbar-nav border-left flex-row ">
-                    <!--            <li class="nav-item border-right dropdown notifications">-->
-                    <!--                <a class="nav-link nav-link-icon text-center" href="#" role="button" id="dropdownMenuLink"-->
-                    <!--                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
-                    <!--                    <div class="nav-link-icon__wrapper">-->
-                    <!--                        <i class="material-icons"></i>-->
-                    <!--                        <span class="badge badge-pill badge-danger">2</span>-->
-                    <!--                    </div>-->
-                    <!--                </a>-->
-                    <!--                <div class="dropdown-menu dropdown-menu-small" aria-labelledby="dropdownMenuLink">-->
-                    <!--                    <a class="dropdown-item" href="#">-->
-                    <!--                        <div class="notification__icon-wrapper">-->
-                    <!--                            <div class="notification__icon">-->
-                    <!--                                <i class="material-icons"></i>-->
-                    <!--                            </div>-->
-                    <!--                        </div>-->
-                    <!--                        <div class="notification__content">-->
-                    <!--                            <span class="notification__category">Analytics</span>-->
-                    <!--                            <p>Your website’s active users count increased by <span-->
-                    <!--                                    class="text-success text-semibold">28%</span> in the last week. Great-->
-                    <!--                                job!</p>-->
-                    <!--                        </div>-->
-                    <!--                    </a>-->
-                    <!--                    <a class="dropdown-item" href="#">-->
-                    <!--                        <div class="notification__icon-wrapper">-->
-                    <!--                            <div class="notification__icon">-->
-                    <!--                                <i class="material-icons"></i>-->
-                    <!--                            </div>-->
-                    <!--                        </div>-->
-                    <!--                        <div class="notification__content">-->
-                    <!--                            <span class="notification__category">Sales</span>-->
-                    <!--                            <p>Last week your store’s sales count decreased by <span-->
-                    <!--                                    class="text-danger text-semibold">5.52%</span>. It could have been-->
-                    <!--                                worse!</p>-->
-                    <!--                        </div>-->
-                    <!--                    </a>-->
-                    <!--                    <a class="dropdown-item notification__all text-center" href="#"> View all-->
-                    <!--                        Notifications </a>-->
-                    <!--                </div>-->
-                    <!--            </li>-->
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle text-nowrap px-3"  href="#" id="profile-menu" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
-                                        <img class="user-avatar rounded-circle mr-2" src="images/avatars/user-avatar.svg"
-                                             alt="User Avatar">
-                                        <span class="d-none d-md-inline-block">John Due</span>
-                                    </a>
-                                    <div class="dropdown-menu dropdown-menu-small">
-                                        <a class="dropdown-item" href="user-profile.html">
-                                            <i class="fas fa-user">&nbsp;</i> Profile
-                                        </a>
-                                        <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item text-danger" href="login.html">
-                                            <i class="fas fa-door-open">&nbsp;</i> Logout
-                                        </a>
-                                    </div>
+                                <li class="nav-item d-none d-sm-inline-block">
+                                    <a href="funds.html" class="nav-link">Fundos</a>
                                 </li>
                             </ul>
-                        </nav>
-                    </div>
-                    <!-- Navbar End -->
-                    
+                        </div>
+                        <!-- Form Search Begin -->
+                        <form class="d-flex me-2">
+                            <div class="input-group">
+                                <input class="form-control" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+                                <button class="btn btn-outline-primary" type="submit">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </form>
+                        <!-- Form Search End -->
+                        <!-- Right menu -->
+                        <ul class="navbar-nav flex-row ">
+                            <li class="nav-item dropdown notifications dropstart">
+                                <a class="nav-link nav-link-icon text-center" href="#"
+                                   role="button" id="dropdownMenuLink"
+                                   data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                >
+                                    <div class="nav-link-icon__wrapper">
+                                        <i class="fas fa-bell">&nbsp;</i>
+                                        <span class="badge badge-pill bg-danger">
+                                            2
+                                            <span class="visually-hidden">Unread messages</span>
+                                        </span>
+                                    </div>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-small dropdown-menu-dark">
+                                    <a class="dropdown-item border-bottom" href="#">
+                                        <div class="notification__icon-wrapper">
+                                            <div class="notification__icon">
+                                                    <i class="fas fa-signal">&nbsp;</i>
+                                            </div>
+                                        </div>
+                                        <div class="notification__content">
+                                            <span class="notification__category">BTC/BRL</span>
+                                            <p>Variou <span class="text-success text-semibold">28%</span>. Para mais detalhes consultar página</p>
+                                            <p class="notification__date text-sm-end">2022/01/10 10:00</p>
+                                        </div>
+                                    </a>
+                                    <a class="dropdown-item border-bottom" href="#">
+                                        <div class="notification__icon-wrapper">
+                                            <div class="notification__icon">
+                                                <i class="fas fa-signal">&nbsp;</i>
+                                            </div>
+                                        </div>
+                                        <div class="notification__content">
+                                            <span class="notification__category">BNB/BRL</span>
+                                            <p>Variou <span class="text-light text-success text-semibold">28%</span>. Para mais detalhes consultar página</p>
+                                            <p class="notification__date text-sm-end">2022/01/10 10:00</p>
+                                        </div>
+                                    </a>
+                                    <a class="dropdown-item notification__all text-center" href="#"> Ver todas </a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-nowrap px-3"
+                                   href="#" id="profile-menu" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
+                                    <img class="user-avatar rounded-circle mr-2" src="images/avatars/user-avatar.svg"
+                                         alt="User Avatar">
+                                    <span class="d-none d-md-inline-block">John Due</span>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-small dropdown-menu-dark">
+                                    <a class="dropdown-item" href="user-profile.html">
+                                        <i class="fas fa-user">&nbsp;</i> Profile
+                                    </a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item text-danger" href="login.html">
+                                        <i class="fas fa-door-open">&nbsp;</i> Logout
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+                <!-- Navbar End -->
 
+                <main class="main-content">
                     <div class="main-content-container">
                         <!-- page header begin -->
                         <div class="page-header row">
@@ -182,7 +217,7 @@
 
                 </main>
                 <footer class="main-footer">
-                
+
                 </footer>            </div>
         </div>
         <!-- last scripts -->

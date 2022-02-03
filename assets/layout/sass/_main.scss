@@ -14,3 +14,19 @@ html {
 .main-content .card {
   margin-top: 1%;
 }
+
+.border-left {
+  border-left: 1px solid var(--surface-400) !important;
+}
+
+.border-right {
+  border-right: 1px solid var(--surface-400) !important;
+}
+
+.border-top {
+  border-top: 1px solid var(--surface-400) !important;
+}
+
+.border-bottom {
+  border-bottom: 1px solid var(--surface-400) !important;
+}

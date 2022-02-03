@@ -30,6 +30,22 @@ html {
   margin-top: 1%;
 }
 
+.border-left {
+  border-left: 1px solid var(--surface-400) !important;
+}
+
+.border-right {
+  border-right: 1px solid var(--surface-400) !important;
+}
+
+.border-top {
+  border-top: 1px solid var(--surface-400) !important;
+}
+
+.border-bottom {
+  border-bottom: 1px solid var(--surface-400) !important;
+}
+
 .main-navbar .navbar > * {
   display: -ms-flexbox;
   display: flex;
@@ -44,6 +60,68 @@ html {
   position: sticky;
   top: 0;
   z-index: 1020;
+}
+
+.notification__icon-wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5px;
+}
+
+.notification__icon {
+  background-color: var(--bs-primary);
+  box-shadow: 0 0 0 1px #fff, inset 0 0 3px rgba(0, 0, 0, 0.2);
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  display: block;
+  text-align: center;
+  border-radius: 50%;
+  color: white;
+}
+
+.notification__content {
+  padding: 0 0.625rem;
+}
+
+.notification__category {
+  font-size: 12px;
+  color: var(--bs-orange);
+  letter-spacing: 0.0938rem;
+  display: inline-block;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.notification__date {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--bs-gray-500);
+}
+
+.notification__all {
+  display: block !important;
+}
+
+.main-navbar .navbar .notifications .dropdown-menu .dropdown-item {
+  display: flex;
+  padding: 5px 5px 0 5px;
+}
+
+.main-navbar .navbar .notifications .dropdown-menu .dropdown-item:last-child {
+  display: flex;
+  padding: 5px;
+}
+
+.main-navbar .navbar .notifications .dropdown-menu {
+  right: 0 !important;
+  top: auto !important;
+  padding-bottom: 0;
+}
+
+.dropdown-menu-dark .text-success {
+  color: var(--bs-teal) !important;
 }
 
 .main-sidebar {
