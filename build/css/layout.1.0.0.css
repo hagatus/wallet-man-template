@@ -177,6 +177,15 @@ html {
   margin-top: 5px;
 }
 
+.forgot {
+  height: 100%;
+}
+
+.forgot .card {
+  max-width: 350px;
+  margin: 10% auto;
+}
+
 .opensans {
   font-family: "Open Sans", sans-serif;
 }
