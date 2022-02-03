@@ -1,0 +1,80 @@
+<!doctype html>
+<html class="no-js h-100" lang="pt">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>{{default.projectName}} - {{fiis.title}}</title>
+
+        {{>partials/headAssets}}
+    </head>
+    <body class="layout-fixed">
+        <div class="container-fluid">
+            <div class="row">
+                {{>partials/sidebar}}
+                {{>partials/mainNavbar}}
+                <main class="main-content">
+
+                    <div class="main-content-container">
+                        <!-- page header begin -->
+                        <div class="page-header row">
+                            <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
+                                <span class="text-uppercase page-subtitle">{{default.dashboard}}</span>
+                                <h3 class="page-title">FIIs - Visão Geral</h3>
+                            </div>
+                        </div>
+                        <!-- page header end -->
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <!-- FIIs composição gráficos begin -->
+                                <div class="card" id="fii-composition">
+                                    <div class="card-header border-bottom">
+                                        <h6 class="m-0">FIIs - Composição</h6>
+                                    </div>
+                                    <div class="card-body d-flex">
+                                        <canvas height="340" style="max-width: 100% !important;"
+                                                id="fii-composition-graph" class="m-auto"></canvas>
+                                    </div>
+                                    <div class="card-footer">
+                                        <a class="btn btn-primary" href="#" role="button">Mais detalhes</a>
+                                    </div>
+                                </div>
+                                <!-- FIIs composição gráficos end -->
+                            </div>
+                            <div class="col-lg-6">
+                                <!-- FIIs evolução gráficos begin -->
+                                <div class="card" id="fii-evolution">
+                                    <div class="card-header border-bottom">
+                                        <h6 class="m-0">FIIs - Evolução</h6>
+                                    </div>
+                                    <div class="card-body d-flex">
+                                        <div class="date-range">
+
+                                        </div>
+                                        <canvas height="340" style="max-height: 300px !important;"
+                                                id="fii-evolution-graph" class=""></canvas>
+                                    </div>
+                                    <div class="card-footer">
+                                        <a class="btn btn-primary" href="#" role="button">Mais detalhes</a>
+                                    </div>
+                                </div>
+                                <!-- FIIs evolução gráficos end -->
+                            </div>
+                        </div>
+
+                        {{>partials/fiis/userEquities}}
+                        {{>partials/fiis/userFavourites}}
+                        {{>partials/fiis/bestOptions}}
+
+                    </div>
+
+
+                </main>
+                {{>partials/footer}}
+            </div>
+        </div>
+        <!-- last scripts -->
+        <script type="text/javascript" src="js/fiis.1.0.0.js"></script>
+        <!-- last scripts -->
+    </body>
+</html>
