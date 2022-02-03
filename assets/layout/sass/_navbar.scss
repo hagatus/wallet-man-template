@@ -40,6 +40,7 @@
 }
 .notification__content {
   padding: 0 .625rem;
+  font-size: 12px;
 }
 
 .notification__category {
@@ -60,6 +61,7 @@
 
 .notification__all {
   display: block !important;
+  font-size: 12px;
 }
 
 .main-navbar .navbar .notifications .dropdown-menu .dropdown-item {
@@ -79,4 +81,12 @@
 
 .dropdown-menu-dark .text-success {
   color: var(--bs-teal) !important;
+}
+
+.dropdown-menu .dropdown-header {
+  border-bottom: 1px solid var(--bs-gray-500);
+  padding-top: 0;
+  padding-bottom: 5px;
+  color: #fff !important;
+  font-weight: bold;
 }
