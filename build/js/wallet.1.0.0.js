@@ -81,6 +81,101 @@
         });
     }
 
+
     walletMonthGraph();
     walletYearGraph();
+
+    class WalletGraphsManager {
+
+        constructor(selectors) {
+            this.selectors = selectors || []
+            this.canvasList = []
+        }
+
+        render() {
+            for (const i in this.selectors) {
+                let selector = this.selectors[i]
+                // console.log(selector)
+                let items = document.querySelectorAll(selector)
+                // console.log(items)
+                items.forEach((node) => {
+                    this.canvasList.push(node)
+                })
+            }
+
+            this.canvasList.forEach((canvaNode) => {
+                // console.log(canvaNode);
+
+                const chartData = {
+                    datasets: [{
+                        data: [0, 1 ,2, 3 , 4 ],
+                        label: 'Hoje',
+                        fill: 'start',
+                        borderColor: 'rgb(75, 192, 192)',
+                        tension: 0.1
+                    }],
+                    labels: [2017, 2018, 2019, 2020, 2021]
+                }
+                const chartOptions = this.getChartOptions()
+
+                const context = canvaNode.getContext('2d');
+                const chart = new Chart(context, {
+                    type: 'line',
+                    data: chartData,
+                    options: chartOptions
+                });
+            })
+
+        }
+
+        getChartOptions() {
+            return {
+                maintainAspectRatio: true,
+                responsive: true,
+                plugins: {
+                    chartAreaBorder: {
+                        borderColor: 'red',
+                        borderWidth: 2,
+                        borderDash: [5, 5],
+                        borderDashOffset: 2,
+                    },
+                    title: {
+                        display: false,
+                    },
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        display: false,
+                        enabled: false,
+                        custom: false
+                    }
+                },
+                scales: {
+                    x: {
+                        display: false,
+                        ticks: {
+                            display: false
+                        }
+                    },
+                    y: {
+                        display: false,
+                        ticks: {
+                            display: false,
+                            // Avoid getting the graph line cut of at the top of the canvas.
+                            // Chart.js bug link: https://github.com/chartjs/Chart.js/issues/4790
+                            suggestedMax: 'max'
+                        }
+                    },
+                }
+            };
+        }
+    }
+
+    const selectors = [
+            '.wallet-overview'
+    ]
+    const manager = new WalletGraphsManager(selectors)
+    manager.render()
+    window.manager = manager
 })();

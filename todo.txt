@@ -1,7 +1,7 @@
 https://designrevision.com/demo/shards-dashboard-lite/add-new-post.html
 https://github.com/DesignRevision/shards-dashboard
 https://gist.github.com/MattCheely/3220568
-https://adminlte.io/themes/AdminLTE/pages/examples/register.html "registro".
+https://adminlte.io/themes/AdminLTE/pages/examples/register.html
 https://unpkg.com/primereact@7.2.0/resources/themes/bootstrap4-dark-blue/theme.css
 https://trademap.com.br/
 https://startbootstrap.com/themes?showPro=false
@@ -9,3 +9,9 @@ https://startbootstrap.com/landing-pages?showPro=false
 https://startbootstrap.com/previews/business-frontpage
 https://startbootstrap.com/previews/heroic-features
 https://startbootstrap.com/previews/scrolling-nav
+
+Exemplos:
+https://www.primefaces.org/sakai-ng/#/
+https://designrevision.com/demo/shards-dashboard-lite/
+https://adminlte.io/themes/AdminLTE/index2.html
+https://adminlte.io/themes/v3/

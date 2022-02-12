@@ -70,7 +70,39 @@
     ]
   },
   "wallet": {
-    "title": "Carteira"
+    "title": "Carteira",
+    "walletOverview": [
+      {
+        "label": "Ações",
+        "value": 3500.00,
+        "percentage": 4.5,
+        "canvas_class": "wallet-overview-equities"
+      },
+      {
+        "label": "FIIs",
+        "value": 3500.00,
+        "percentage": 4.5,
+        "canvas_class": "wallet-overview-fiis"
+      },
+      {
+        "label": "Fundos",
+        "value": 3500.00,
+        "percentage": 4.5,
+        "canvas_class": "wallet-overview-founds"
+      },
+      {
+        "label": "Renda Fixa",
+        "value": 3500.00,
+        "percentage": 4.5,
+        "canvas_class": "wallet-overview-fixed"
+      },
+      {
+        "label": "Tesouro Direto",
+        "value": 3500.00,
+        "percentage": 4.5,
+        "canvas_class": "wallet-overview-treasure"
+      }
+    ]
   },
   "register": {
     "title": "Cadastro"
