@@ -1,0 +1,30 @@
+<!-- page header begin -->
+<div class="page-header row no-gutters py-2  mb-2">
+    <div class="col-12 col-sm-12 text-sm-left mb-0">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                {{#breadcrumb}}
+
+                        {{#current_page}}
+                        <li class="breadcrumb-item active{{class}}" aria-current="page">
+                            {{text}}
+                        </li>
+                        {{/current_page}}
+                        {{^current_page}}
+                            <li class="breadcrumb-item {{class}}">
+                                <a href="{{link}}">{{text}}</a>
+                            </li>
+                        {{/current_page}}
+                {{/breadcrumb}}
+            </ol>
+        </nav>
+        <span class="text-uppercase page-subtitle">
+            {{pageHeader.subtitle}}
+        </span>
+        <h3 class="page-title">
+            <i class="fas {{pageHeader.iconClass}}"></i>
+            {{pageHeader.title}}
+        </h3>
+    </div>
+</div>
+<!-- page header end -->

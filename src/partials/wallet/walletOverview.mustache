@@ -1,21 +1,23 @@
+<div class="row">
 {{#wallet.walletOverview}}
-    <div class="col-lg col-md-6 col-sm-6 mb-4">
-        <div class="info-box card card-small">
-            <div class="card-body info-box-content m-auto">
-                <div class="info-box-data">
-                    <span class="data-label text-uppercase">{{label}}</span>
-                </div>
-                <div class="info-box-data">
-                    <span class="data-value text-uppercase">R$ {{value}}</span>
-                </div>
-                <div class="info-box-data">
+        <div class="col-lg col-md-6 col-sm-6 mb-4">
+            <div class="info-box card card-small">
+                <div class="card-body info-box-content m-auto">
+                    <div class="info-box-data">
+                        <span class="data-label text-uppercase">{{label}}</span>
+                    </div>
+                    <div class="info-box-data">
+                        <span class="data-value text-uppercase">R$ {{value}}</span>
+                    </div>
+                    <div class="info-box-data">
                         <span class="data-percentage text-success">
                             <i class="fas fa-percent"></i>
                             {{percentage}}%
                         </span>
+                    </div>
                 </div>
+                <canvas height="100" class="wallet-overview {{canvas_class}}"></canvas>
             </div>
-            <canvas height="100" class="wallet-overview {{canvas_class}}"></canvas>
         </div>
-    </div>
 {{/wallet.walletOverview}}
+</div>

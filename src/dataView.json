@@ -71,6 +71,25 @@
   },
   "wallet": {
     "title": "Carteira",
+    "pageHeader": {
+      "title": "Carteira - Visão Geral",
+      "iconClass": "fa-wallet",
+      "subtitle": "Dashboard"
+    },
+    "breadcrumb": [
+      {
+        "link": "#",
+        "text": "Carteira",
+        "class": "",
+        "current_page": false
+      },
+      {
+        "link": "#",
+        "text": "Dashboard",
+        "class": "",
+        "current_page": true
+      }
+    ],
     "walletOverview": [
       {
         "label": "Ações",
@@ -91,16 +110,38 @@
         "canvas_class": "wallet-overview-founds"
       },
       {
+        "label": "Criptos",
+        "value": 3500.00,
+        "percentage": 4.5,
+        "canvas_class": "wallet-overview-criptos"
+      },
+      {
         "label": "Renda Fixa",
         "value": 3500.00,
         "percentage": 4.5,
         "canvas_class": "wallet-overview-fixed"
+      }
+    ]
+  },
+  "equities": {
+    "title": "Ações",
+    "pageHeader": {
+      "title": "Ações - Visão Geral",
+      "iconClass": "fa-chart-line",
+      "subtitle": "Dashboard"
+    },
+    "breadcrumb": [
+      {
+        "link": "#",
+        "text": "Ações",
+        "class": "",
+        "current_page": false
       },
       {
-        "label": "Tesouro Direto",
-        "value": 3500.00,
-        "percentage": 4.5,
-        "canvas_class": "wallet-overview-treasure"
+        "link": "#",
+        "text": "Dashboard",
+        "class": "",
+        "current_page": true
       }
     ]
   },

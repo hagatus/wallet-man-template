@@ -31,9 +31,24 @@ html {
   border-bottom: 1px solid var(--bs-gray-500) !important;
 }
 
+.page-header{
+  //background-image: linear-gradient(to right, var(--bs-hagatus-blue-0) , var(--bs-hagatus-blue-dark));
+  //background: var(--bs-dark);
+  background: var(--bs-gray-100);
+  //color: white;
+  //border-bottom: 1px solid var(--bs-gray-500);
+  //border-bottom: 2px solid var(--bs-hagatus-blue-0);
+  //border-top: 1px solid var(--bs-white);
+  //border-top: 2px solid var(--bs-hagatus-blue-0);
+}
+
 
 .page-header nav{
   position: relative;
+}
+
+.page-header nav a{
+  color: var(--bs-dark);
 }
 
 .page-header .breadcrumb {
@@ -41,4 +56,16 @@ html {
   position: absolute;
   top: 0px;
   right: 10px;
+}
+
+.page-header .page-title {
+  border-top: 1px solid var(--bs-gray-500);
+  padding-top: 8px;
+}
+
+.page-header .page-subtitle {
+  font-weight: 100;
+  font-size: 12px;
+  //background-image: linear-gradient(to right, var(--bs-primary) , var(--bs-info));
+
 }

@@ -15,30 +15,13 @@
                 {{>partials/mainNavbar}}
                 <main class="main-content">
                     <div class="main-content-container">
-                        <!-- page header begin -->
-                        <div class="page-header row no-gutters py-4">
-                            <div class="col-12 col-sm-12 text-sm-left mb-0">
-                                <nav aria-label="breadcrumb">
-                                    <ol class="breadcrumb">
-                                        <li class="breadcrumb-item"><a href="#">Carteira</a></li>
-                                        <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
-                                    </ol>
-                                </nav>
-                                <span class="text-uppercase page-subtitle">{{default.dashboard}}</span>
-                                <h3 class="page-title">
-                                    Carteira - Visão Geral
-                                </h3>
-
-                            </div>
-
-                        </div>
-                        <!-- page header end -->
-                        <div class="row">
-                            {{>partials/wallet/walletOverview}}
-                        </div>
+                        {{#wallet}}
+                            {{>partials/pageHeader}}
+                        {{/wallet}}
+                        {{>partials/wallet/walletOverview}}
                         <div class="row">
                             <div class="col-lg-6">
-                                <!-- FIIs composição gráficos begin -->
+                                <!-- Carteira composição gráficos begin -->
                                 <div class="card box" id="wallet-month-evolution">
                                     <div class="card-header border-bottom">
                                         <h6 class="m-0">
@@ -54,10 +37,10 @@
                                         <a class="btn btn-primary" href="#" role="button">Mais detalhes</a>
                                     </div>
                                 </div>
-                                <!-- FIIs composição gráficos end -->
+                                <!-- Carteira composição gráficos end -->
                             </div>
                             <div class="col-lg-6">
-                                <!-- FIIs evolução gráficos begin -->
+                                <!-- Carteira evolução gráficos begin -->
                                 <div class="card box" id="wallet-annual-evolution">
                                     <div class="card-header border-bottom">
                                         <h6 class="m-0">
@@ -76,7 +59,7 @@
                                         <a class="btn btn-primary" href="#" role="button">Mais detalhes</a>
                                     </div>
                                 </div>
-                                <!-- FIIs evolução gráficos end -->
+                                <!-- Carteira evolução gráficos end -->
                             </div>
                         </div>
 
