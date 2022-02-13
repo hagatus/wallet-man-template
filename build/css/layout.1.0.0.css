@@ -241,11 +241,19 @@ html {
   .navbar-links {
     border: 1px solid #00FF;
   }
+
+  .nav-search {
+    display: block !important;
+  }
 }
 @media (min-width: 1200px) {
   .navbar-links {
     border: 1px solid #0F0;
     flex-basis: auto;
+  }
+
+  .nav-search {
+    display: block !important;
   }
 }
 .main-sidebar {
