@@ -16,22 +16,19 @@
                 {{>partials/mainNavbar}}
                 <main class="main-content">
                     <div class="main-content-container">
-                        <!-- page header begin -->
-                        <div class="page-header row">
-                            <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
-                                <span class="text-uppercase page-subtitle">{{default.dashboard}}</span>
-                                <h3 class="page-title">Visão geral</h3>
-                            </div>
-                        </div>
-                        <!-- page header end -->
-
+                        {{#userProfile}}
+                            {{>partials/pageHeader}}
+                        {{/userProfile}}
                     </div>
-
 
                 </main>
                 {{>partials/footer}}
 
             </div>
         </div>
+        <!-- last scripts -->
+
+        <!-- last scripts -->
+        {{>partials/footerAssets}}
     </body>
 </html>

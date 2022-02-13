@@ -10,8 +10,49 @@
   "login": {
     "title": "Login"
   },
+  "userProfile": {
+    "title": "Perfil do Usuário",
+    "pageHeader": {
+      "title": "Perfil",
+      "iconClass": "fa-user",
+      "subtitle": "Usuário"
+    },
+    "breadcrumb": [
+      {
+        "link": "#",
+        "text": "Usuário",
+        "class": "",
+        "current_page": false
+      },
+      {
+        "link": "#",
+        "text": "Perfil",
+        "class": "",
+        "current_page": true
+      }
+    ]
+  },
   "fiis": {
     "title": "FIIs",
+    "pageHeader": {
+      "title": "FIIs - Visão Geral",
+      "iconClass": "fa-signal",
+      "subtitle": "Dashboard"
+    },
+    "breadcrumb": [
+      {
+        "link": "#",
+        "text": "FIIs",
+        "class": "",
+        "current_page": false
+      },
+      {
+        "link": "#",
+        "text": "Dashboard",
+        "class": "",
+        "current_page": true
+      }
+    ],
     "bestOptions": [
       {
         "symbol": "BARI11",

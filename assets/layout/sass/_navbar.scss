@@ -1,6 +1,9 @@
 .main-navbar {
 
 }
+.main-navbar .navbar {
+  height: 3.75rem;
+}
 .main-navbar .navbar>* {
   display: -ms-flexbox;
   display: flex;
@@ -121,6 +124,9 @@
 }
 
 @media (min-width: 768px) {
+  //.toggle-sidebar {
+  //  display: none;
+  //}
   .navbar-links {
     //background: #F00;
     border: 1px solid #F00;
@@ -139,6 +145,9 @@
 }
 
 @media (min-width: 992px) {
+  //.toggle-sidebar {
+  //  display: none;
+  //}
   .navbar-links {
     //background: #00F;
     border: 1px solid #00FF;
@@ -146,6 +155,10 @@
 }
 
 @media (min-width: 1200px) {
+  //.toggle-sidebar {
+  //  display: none;
+  //}
+
   .navbar-links {
     //background: #0F0;
     border: 1px solid #0F0;
