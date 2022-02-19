@@ -16,15 +16,33 @@
         {{>partials/mainNavbar}}
         <main class="main-content">
             <div class="main-content-container">
-                <!-- page header begin -->
-                <div class="page-header row">
-                    <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
-                        <span class="text-uppercase page-subtitle">{{fiis.title}}</span>
-                        <h3 class="page-title">Adicionar novo</h3>
+                {{#fiis}}
+                    {{>partials/pageHeader}}
+                {{/fiis}}
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="card">
+                            <div class="card-header">
+
+                            </div>
+                            <div class="card-body">
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="ticket_bought_date">Ticket</label>
+                                        <input type="date" id="ticket_bought_date" value="" placeholder="dd-mm-yyyy"
+                                               min="2000-01-01" max="" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}">
+                                        <div class="form-text">Escolha a data de compra</div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="ticket">Ticket</label>
+                                        <input id="ticket" type="text" class="form-control"/>
+                                        <div class="form-text">Escolha na lista uma opção prévia ou adicione uma nova opção</div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <!-- page header end -->
-
             </div>
 
 
@@ -33,5 +51,10 @@
 
     </div>
 </div>
+<!-- last scripts -->
+<script type="text/javascript" src="js/fiis.1.0.0.js"></script>
+<script type="text/javascript" src="js/fiis-graphs.1.0.0.js"></script>
+<!-- last scripts -->
+{{>partials/footerAssets}}
 </body>
 </html>

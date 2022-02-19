@@ -79,7 +79,7 @@
                             <a class="nav-link toggle-sidebar d-lg-none" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
                         </li>
                         <li class="nav-item d-none d-sm-inline-block">
-                            <a href="wallet.html" class="nav-link">Carteira</a>
+                            <a href="wallet.html" class="nav-link active">Carteira</a>
                         </li>
                         <li class="nav-item d-none d-sm-inline-block">
                             <a href="equities.html" class="nav-link">Ações</a>
@@ -175,15 +175,54 @@
 
         <main class="main-content">
             <div class="main-content-container">
-                <!-- page header begin -->
-                <div class="page-header row">
-                    <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
-                        <span class="text-uppercase page-subtitle">FIIs</span>
-                        <h3 class="page-title">Adicionar novo</h3>
+                    <!-- page header begin -->
+                    <div class="page-header row no-gutters py-2  mb-2">
+                        <div class="col-12 col-sm-12 text-sm-left mb-0">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+
+                                                <li class="breadcrumb-item ">
+                                                    <a href="#">FIIs</a>
+                                                </li>
+
+                                            <li class="breadcrumb-item active" aria-current="page">
+                                                Dashboard
+                                            </li>
+                                </ol>
+                            </nav>
+                            <span class="text-uppercase page-subtitle">
+                                Dashboard
+                            </span>
+                            <h3 class="page-title">
+                                <i class="fas fa-signal"></i>
+                                FIIs - Visão Geral
+                            </h3>
+                        </div>
+                    </div>
+                    <!-- page header end -->                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="card">
+                            <div class="card-header">
+
+                            </div>
+                            <div class="card-body">
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="ticket_bought_date">Ticket</label>
+                                        <input type="date" id="ticket_bought_date" value="" placeholder="dd-mm-yyyy"
+                                               min="2000-01-01" max="" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}">
+                                        <div class="form-text">Escolha a data de compra</div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="ticket">Ticket</label>
+                                        <input id="ticket" type="text" class="form-control"/>
+                                        <div class="form-text">Escolha na lista uma opção prévia ou adicione uma nova opção</div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <!-- page header end -->
-
             </div>
 
 
@@ -216,5 +255,11 @@
         </footer>
     </div>
 </div>
-</body>
+<!-- last scripts -->
+<script type="text/javascript" src="js/fiis.1.0.0.js"></script>
+<script type="text/javascript" src="js/fiis-graphs.1.0.0.js"></script>
+<!-- last scripts -->
+<!-- footer assets begin -->
+<script type="text/javascript" src="js/sidebar.1.0.0.js"></script>
+<!-- footer assets end --></body>
 </html>

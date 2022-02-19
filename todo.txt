@@ -15,3 +15,10 @@ https://www.primefaces.org/sakai-ng/#/
 https://designrevision.com/demo/shards-dashboard-lite/
 https://adminlte.io/themes/AdminLTE/index2.html
 https://adminlte.io/themes/v3/
+
+layout:
+https://www.w3schools.com/js/default.asp
+https://stackoverflow.com/
+
+Mustache:
+https://mustache.github.io/mustache.5.html
